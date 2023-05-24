@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Quando' rel='stylesheet'>
+        <link rel="stylesheet" href="/CSS.css" >
+        <link rel="icon" type="image/png" href="/img/logo.png">
+        <title>Caramel Chocolate Cake</title>
+        <style>
+            th{
+                padding-top: 10px;
+                padding-bottom: 5px;
+                padding-left: 25px;
+                padding-right: 25px;
+                border: solid 1px;
+            }
+            td{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 25px;
+                padding-right: 25px;
+                border: solid 1px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="nav">
+            <div>
+                <p1 style="text-align: left;"><b>NoyPi</b> Home Delicacies</p1>
+            </div>
+            <div style="margin-left: auto;" class="inactiveNav1">
+                <a href="/Home.html" class="links">Home</a>
+            </div>
+            <div class="inactiveNav1">
+                <a href="/About.html" class="links">About</a>
+            </div>
+            <div style="max-width: 100px;" class="inactiveNav1">
+                <a href="/Cart.html"><img src="/img/ShopCart.png" style="max-width: 25px; height: auto; display: inline; padding-right: 0; z-index: 10;"></a>
+                <div class="inCart"><p1 id="value" style="max-width: 15px; max-height: 15px; font-size: 80%; margin-left: 2.5px; padding-top: 2px; display: flex; justify-content: center; align-items: center;">0</p1></div>
+            </div>
+        </div>
+        <div class="vertAlign">
+            <div class="box">
+                <center>
+                    <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                            <img src="D5.jpg" class="toHover" style="border: 3px solid #fff; border-radius: 10px; width: fit-content; margin-right: 20px; max-width: 320px; ">
+                        <div>
+                            <h2>CARAMEL CHOCOLATE CAKE</h2>
+                            <p  class="textDesc"> Our caramel chocolate cake is a decadent dessert that combines the rich flavors of caramel and chocolate. Our cake layers are moist, tender, soft, and delicate that melts in your mouth. The caramel that we use plays a crucial role in the cake. We used it as a filling and a drizzle over the cake layers, adding a sweet and buttery taste. We also offer optional additional like chopped nuts, such as walnuts or pecans, that is sprinkled on top or added between the layers for a delightful crunch or a caramel sauce drizzled on top for an extra caramel kick.</p>
+                            <table cellspacing="0" style="text-align: center; border: solid 2px;">
+                                <tr>
+                                    <th colspan="3"><b> CARAMEL CHOCOLATE CAKE</b></th>
+                                </tr>
+                                <tr>
+                                    <th>Regular Price</th>
+                                    <th>Preparation Time</th>
+                                    <th>Servings</th>
+                                </tr>
+                                <tr>
+                                    <td>95</td>
+                                    <td>10-15 minutes</td>
+                                    <td>1-2 Servings</td>
+                                </tr>
+                            </table>
+                            <br><br>
+                            <div class="addToCart">
+                                <button class="links" onclick="addToCart(value)" id="addButton">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <div class="footerCont">
+                <h1 style="max-width: 30vw;">SUBSCRIBE TO OUR NEWSLETTER</h1>
+                <input type="email" placeholder="Email" id="email" class="inputField">
+                <button type="submit"><img src="/img/arrow.png" class="toHover" style="height: auto; width: 30px;"></button>
+            </div>
+            <div class="footerCont">
+                <h2>Contact Us:</h2>
+                <div class="contactUs">
+                    <div style="display: inline;">
+                        <img src="/img/facebook.png" class="icon">
+                    </div>
+                    <div style="display: inline;">
+                        <a href="https://www.facebook.com/" class="links" style="font-size: 110%;">Facebook</a>
+                    </div>
+                </div>
+                <br>
+                <div class="contactUs">
+                    <div style="display: inline;">
+                        <img src="/img/instagram.png" class="icon">
+                    </div>
+                    <div style="display: inline;">
+                        <a href="https://www.instagram.com/" class="links" style="font-size: 110%;">Instagram</a>
+                    </div>
+                </div>
+                <br>
+                <div class="contactUs">
+                    <div style="display: inline;">
+                        <img src="/img/twitter.png" class="icon">
+                    </div>
+                    <div style="display: inline;">
+                        <a href="https://twitter.com/" class="links" style="font-size: 110%;">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerCont" style="width: 35vw;">
+                <h2>Download Our App</h2>
+                <p1>Download Available on Android and iOS!</p1>
+                <br><br>
+                <a href="https://play.google.com/store/apps?hl=en&gl=US"><img src="/img/GooglePlay.png" class="appImg"></a>
+                <a href="https://www.apple.com/ph/app-store/"><img src="/img/AppleAppStore.png" class="appImg"></a>
+            </div>
+        </footer>
+        <script src="/addToCart.js"></script>
+    </body>
+</html>
