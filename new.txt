@@ -1,0 +1,32 @@
+appetizer
+
+calamARES
+churros
+lumpiang shanghai
+nachos
+tokwat baboy
+ukoy
+atsara
+empanada
+
+beverages
++mango
+orange
+buko
+pineapple
+
+
+breakfast
+bangsilog
+tuyosilog
+dilisilog
+longsilog
+spamsilog
+tocilog
+cornsilog
+tapsilog
+hotsilog
+hamsilog
+sisilog
+bacsilog
+
