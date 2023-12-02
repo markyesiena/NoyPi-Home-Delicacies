@@ -6,6 +6,50 @@
         <link href='https://fonts.googleapis.com/css?family=Quando' rel='stylesheet'>
         <link rel="icon" type="image/png" href="/NoyPi-Home-Delicacies/img/logo.png">
     </head>
+    <style>
+        * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 5s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+    </style>
     <body>
         <?php
             if(!isset($_SESSION)){ 
@@ -66,18 +110,58 @@
         </div>
         <br>
         <br>
-        <div class="pageContent" id="Content">
-            <div class="box">
-                <br><br>
-                <img src="/NoyPi-Home-Delicacies/img/Picture1.png" style="height: 290px; width: 290px; float: right; padding-top: 5px; padding-left: 15px;">
-                <br>
-                <h1 style="text-align: left; padding-top: 10px;">Explore Authentic Home Delicacies</h1>
-                <p1 style="text-align: justify; font-size: 150%;">Pinoy Home Delicacies is a Filipino-inspired food business that specializes in offering a wide range of traditional Filipino delicacies made with authentic recipes and high-quality ingredients. We are known for our commitment to preserving and promoting the rich culinary heritage of the Philippines by providing our customers with delicious and nostalgic treats.</p1>
                 <br>
                 <br>
-                <br>
-                <br>
-                <br>
+                <div class="pageContent" id="Content">
+            <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="slide1.png" style="width:100%; height:500px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="slide2.png" style="width:100%; height:500px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="slide1.png" style="width:100%; height:500px;">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3500); // Change image every 2 seconds
+}
+</script>
+ 
+            </div>
+            <br>
+
+
             </div>
             <br>
             <div class="nav2">

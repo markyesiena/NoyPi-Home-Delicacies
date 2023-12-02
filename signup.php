@@ -127,7 +127,29 @@
     </style>
   </head>
   <body>
-    <?php include("validate.php"); ?>
+    <?php include("connect.php"); ?>
+    <?php 
+    if(isset($_POST['create'])){
+        $Name = $_POST['Name'];
+        $Number = $_POST['Number'];
+        $Address = $_POST['Address'];
+        $Username = $_POST['Username'];
+        $Password = $_POST['Password'];
+        $email = $_POST['email'];
+        
+        // SQL query to insert user data into the users table
+        $query= "INSERT INTO customers(Name, Number, Address, Username, Password, email) VALUES('{$Name}', '{$Number}', '{$Address}', '{$Username}','{$Password}','{$email}')";
+        $add_user = mysqli_query($connect, $query);
+        
+        // displaying proper message for the user to see whether the query executed perfectly or not 
+        if (!$add_user) {
+            echo "something went wrong ". mysqli_error($connect);
+        }
+        else {
+            echo "<script type='text/javascript'>alert('User added successfully!')</script>";
+        } 
+    }
+    ?>
   <div class="nav" id="nav">
             <div class="navLine1">
                 <div>
@@ -160,23 +182,28 @@
     <center>
       <div class="logbox">
         <div class="container">
-          <form action="validate.php" method="post">
-                <h2 style="margin-bottom: 10px; text-align: center;">User Login</h2>
+          <form action="" method="post">
+                <h2 style="margin-bottom: 10px; text-align: center;">Sign Up</h2>
                 <br>
+                <label for="Name"><i class="fa fa-user"></i>Name</label>
+                  <input type="text" name="Name" required>
+
+                <label for="Number"><i class="fa fa-user"></i>Phone Number</label>
+                  <input type="text" name="Number" required>
+
+                <label for="Address"><i class="fa fa-user"></i>Address</label>
+                  <input type="text" name="Address" required>
+                  
                 <label for="Username"><i class="fa fa-user"></i>Username</label>
-                <input type="text" name="Username" required>
+                  <input type="text" name="Username" required>
+
                 <label for="Password"><i class="fa fa-institution"></i> Password</label>
-                <input type="password" name="Password" required>
-                <?php
-                  if($_SESSION['tries'] > 0){
-                    if($_SESSION['wrongpass'] == 1){
-                      echo "<h2>\"Invalid username or password!\"</h2>";
-                    }
-                  }
-                ?>
-              <input type="checkbox" checked="checked" name="rememberme"> Remember me
-            </label>
-            <button type="submit" value="Login" name="Login" class="btn">Login</button>
+                  <input type="password" name="Password" required>
+
+                <label for="email"><i class="fa fa-user"></i>Email</label>
+                  <input type="text" name="email" required>
+
+            <button type="submit" value="Sign up" name="create" class="btn">Sign up</button>
           </form>
     </center>
     </div>

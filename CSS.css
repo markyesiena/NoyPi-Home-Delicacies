@@ -82,7 +82,7 @@ body{
 }
 .logbox{
    background-color: skyblue;
-   height: 650px;
+   height: max-content;
    max-width: 100%;
    width: 100%;
    border: 2px;
@@ -90,6 +90,7 @@ body{
    margin-top: 40px;
    padding-inline: 20px;
    padding-top: 60px;
+   padding-bottom: 40px;
 
 }
 .content{

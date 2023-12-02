@@ -1,12 +1,14 @@
 <?php
+
     $server = 'localhost';
     $user = 'root';
-    $pass = 'phpAdminPassword';
+    $pass = "";
     $db = 'nhd_db';
 
-    $connect = new mysqli($server, $user, $pass, $db);
+    $connect = mysqli_connect($server, $user, $pass, $db);
     
     if(!$connect){
-        die("Unable to Connect");
+        die("Connection failed: " . mysqli_connect_error()); 
     }
+
 ?>

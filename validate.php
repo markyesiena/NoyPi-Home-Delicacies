@@ -12,18 +12,18 @@
 
         $connect = new mysqli($server, $user, $pass, $db);
                             
-        $userName = $_POST['username'];
-        $password = $_POST['password'];
+        $Username = $_POST['Username'];
+        $Password = $_POST['Password'];
 
-        $sql = "SELECT * FROM users WHERE username = '$userName' AND password = '$password'";
+        $sql = "SELECT * FROM customers WHERE Username = '$Username' AND Password = '$Password'";
         $result = mysqli_query($connect, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
         $count = mysqli_num_rows($result);
-        $name = $row['customerName'];
+        $name = $row['Name'];
                             
                             
         if($count == 1){  
-            $_SESSION['username'] = $userName;
+            $_SESSION['Username'] = $Username;
             $_SESSION['name'] = $name;
             $_SESSION['loggedin'] = true;
             header("Location: index.php");
